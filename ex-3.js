@@ -374,4 +374,8 @@ const bills = [
 ];
 
 // Start coding here
-const billMembers;
+const billsWithMembers = bills.filter(bill => bill.member);
+
+// Extract member names using map from filtered bills
+const billMembers = billsWithMembers.map(bill => bill.member.name);
+console.log(billMembers)

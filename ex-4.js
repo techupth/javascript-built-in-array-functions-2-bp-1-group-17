@@ -374,4 +374,15 @@ const bills = [
 ];
 
 // Start coding here
-const totalMembers;
+const filterMember = bills.filter(bill => bill.member)
+const totalMember = filterMember.map(member => member.member.name)
+function checkunique(name){
+  let result = [];
+  let i = 0;
+  while(name[i]){
+    if(!result.includes(name[i])){
+      result.push(name[i])}
+    i++}
+  return result;
+}
+console.log("Unique Members Count: "+ checkunique(totalMember).length);
