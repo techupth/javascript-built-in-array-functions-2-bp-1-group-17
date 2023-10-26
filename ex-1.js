@@ -374,3 +374,7 @@ const bills = [
 ];
 
 // Start coding here
+function sumbill(accumulator,currentvalue){
+  return accumulator+currentvalue.total
+}
+console.log("Total bill transaction is "+bills.reduce(sumbill,0)) 
